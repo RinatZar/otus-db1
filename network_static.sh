@@ -9,6 +9,7 @@ cp $DIR1 $DIR2
 echo "файл конфига 01db-static.yml скопирован в $DIR"
 
 netplan generate
+netplan apply
 if [ $? -eq 0 ]; then
           echo "Статический IP включен"
 else
