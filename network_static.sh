@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DIR='/etc/netplan/'
-DIR1='/home/otus-app1/01db-static.yaml'
+DIR1='/home/otus-db1/01db-static.yaml'
 DIR2='/etc/netplan/'
 
 #Копируем конфиг 
