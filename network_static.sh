@@ -1,13 +1,12 @@
 #!/bin/bash
 
 DIR='/etc/netplan/'
-DIR1='/home/otus-app1/01-static.yaml'
+DIR1='/home/otus-app1/01db-static.yaml'
 DIR2='/etc/netplan/'
 
 #Копируем конфиг 
-sudo -s
 cp $DIR1 $DIR2
-echo "файл конфига 01-static.yml скопирован в $DIR"
+echo "файл конфига 01db-static.yml скопирован в $DIR"
 
 netplan generate
 if [ $? -eq 0 ]; then
