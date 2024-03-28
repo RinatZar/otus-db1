@@ -3,7 +3,7 @@
 user="repl"
 pass="123456"
 
-cre_mysqld.cnf="/etc/mysql/mysql.conf.d/mysqld.cnf"
+cre_mysqld_cnf="/etc/mysql/mysql.conf.d/mysqld.cnf"
 bind_address_new="bind-address = 0.0.0.0"
 
 #Добавляем параметры в mysqld.cnf
