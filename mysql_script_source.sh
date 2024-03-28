@@ -22,7 +22,7 @@ service mysql restart
 echo "Конфиг MySQL-source настроен"
 
 #Создаем пользователя для реплики
-mysql "CREATE USER $user@'%' IDENTIFIED WITH 'caching_sha2_password' BY '$pass';"
-mysql "GRANT REPLICATION SLAVE ON *.* TO $user@'%';"
+mysql -e "CREATE USER $user@'%' IDENTIFIED WITH 'caching_sha2_password' BY '$pass';"
+mysql -e "GRANT REPLICATION SLAVE ON *.* TO $user@'%';"
 echo "Пользователь $user создан и получил права на репликацию"
 echo "MySQL готов к работе"
