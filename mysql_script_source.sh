@@ -8,7 +8,7 @@ bind_address_new="bind-address = 0.0.0.0"
 
 #Добавляем параметры в mysqld.cnf
 
-if [ -f "$cre_mysqld.cnf" ]; then
+if [ -f "$cre_mysqld_cnf" ]; then
   sed -i "s/^bind-address\s*=\s*127.0.0.1/$bind_address_new/" $cre_mysqld.cnf
   echo "server-id = 1" >> $cre_mysqld.cnf
   echo "binlog_format = row" >> $cre_mysqld.cnf
@@ -16,7 +16,7 @@ if [ -f "$cre_mysqld.cnf" ]; then
   echo "enforce-gtid-consistency" >> $cre_mysqld.cnf
   echo "log-replica-updates" >> $cre_mysqld.cnf
 else
-  echo "файл $cre_mysqld.cnf не найден"
+  echo "файл $cre_mysqld_cnf не найден"
 fi
 server mysql restart
 echo "Конфиг MySQL-source настроен"
