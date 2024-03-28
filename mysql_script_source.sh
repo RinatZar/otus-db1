@@ -9,16 +9,16 @@ bind_address_new="bind-address = 0.0.0.0"
 #Добавляем параметры в mysqld.cnf
 
 if [ -f "$cre_mysqld_cnf" ]; then
-  sed -i "s/^bind-address\s*=\s*127.0.0.1/$bind_address_new/" $cre_mysqld.cnf
-  echo "server-id = 1" >> $cre_mysqld.cnf
-  echo "binlog_format = row" >> $cre_mysqld.cnf
-  echo "gtid-mode=ON" >> $cre_mysqld.cnf
-  echo "enforce-gtid-consistency" >> $cre_mysqld.cnf
-  echo "log-replica-updates" >> $cre_mysqld.cnf
+  sed -i "s/^bind-address\s*=\s*127.0.0.1/$bind_address_new/" $cre_mysqld_cnf
+  echo "server-id = 1" >> $cre_mysqld_cnf
+  echo "binlog_format = row" >> $cre_mysqld_cnf
+  echo "gtid-mode=ON" >> $cre_mysqld_cnf
+  echo "enforce-gtid-consistency" >> $cre_mysqld_cnf
+  echo "log-replica-updates" >> $cre_mysqld_cnf
 else
   echo "файл $cre_mysqld_cnf не найден"
 fi
-server mysql restart
+service mysql restart
 echo "Конфиг MySQL-source настроен"
 
 #Создаем пользователя для реплики
