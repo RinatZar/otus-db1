@@ -27,4 +27,4 @@ mysql -e "GRANT REPLICATION SLAVE ON *.* TO $user@'%';"
 echo "Пользователь $user создан и получил права на репликацию"
 mysql -e "create database otus;"
 echo "MySQL готов к работе"
-mysql otus5 < /home/otus-db1/dump-data.sql
+mysql otus < /home/otus-db1/dump-data.sql
