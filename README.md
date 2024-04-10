@@ -19,7 +19,7 @@
    ```bash
     bash apache_script.sh
    ```
-   6. Запустить скрипт настройки MySQL.
+6. Запустить скрипт настройки MySQL.
    ```bash
     bash mysql_script_source.sh
    ```
