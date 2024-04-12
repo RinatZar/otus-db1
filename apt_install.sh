@@ -2,7 +2,7 @@
 
 # Установка Apache2
 sudo apt update
-sudo apt install Apache2 -y
+sudo apt install apache2 -y
 systemctl daemon-reload
 systemctl restart Apache2
 if [ $? -eq 0 ]; then
