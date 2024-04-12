@@ -5,7 +5,7 @@
    ```
 2. Загрузить скрипты для восстановления системы.
     ```bash
-   git clone https://github.com/RinatZar/otus-app1.git
+   git clone https://github.com/RinatZar/otus-db1.git
    ```  
 3. Запустить скрипт настройки сетевого интерфейса.
     ```bash
