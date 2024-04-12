@@ -1,7 +1,7 @@
 # otus-db1. Инструкция по восстановлению
 1. Установить git.
    ```bash
-   sudo apt istall git
+   sudo apt install git -y
    ```
 2. Загрузить скрипты для восстановления системы.
     ```bash
